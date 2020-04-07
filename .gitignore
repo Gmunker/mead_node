@@ -1,0 +1,6 @@
+node_modules/
+/notes-app/node_modules
+/playground/node_modules
+/task-manager/node_modules
+/weather-app/node_modules
+/web-server/node_modules
