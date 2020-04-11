@@ -6,6 +6,4 @@ services:
     ports:
       - 27017:27017
     volumes:
-      # - f:/mead_mongo/_data:/data/db
-      - /media/gmunker/GameDrive/mead_mongo/_data:/data/db
-      #- /var/lib/docker/volumes/mead/_data:/data/db
+      - /var/lib/docker/volumes/mead/_data:/data/db
