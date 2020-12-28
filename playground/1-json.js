@@ -1,9 +1,11 @@
 const fs = require('fs')
 
-const info = JSON.parse(fs.readFileSync('./1-json.json').toString())
+const dataBuffer = fs.readFileSync('1-json.json')
+const dataJSON = dataBuffer.toString()
+const user = JSON.parse(dataJSON)
 
-info.name = "Greg"
-info.age = 40
+user.name = 'Gunther'
+user.age = 54
 
-fs.writeFileSync('1-json.json', JSON.stringify(info))
-
+const userJSON = JSON.stringify(user)
+fs.writeFileSync('1-json.json', userJSON)
