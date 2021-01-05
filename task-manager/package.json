@@ -1,7 +1,7 @@
 {
   "name": "task-manager",
   "version": "1.0.0",
-  "description": "",
+  "description": "Task manager app made with the nodejs Andrew Mead course",
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",

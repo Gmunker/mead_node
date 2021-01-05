@@ -7,6 +7,18 @@ const taskRouter = require('./routers/task');
 const app = express();
 const port = process.env.PORT || 3000;
 
+// app.use((req, res, next) => {
+//   if (req.method === 'GET') {
+//     res.send('GET requests are disabled')
+//   } else {
+//     next()
+//   }
+// })
+
+// app.use((req, res, next) => {
+//   res.status(503).send('Site is under maintaince')
+// })
+
 app.use(express.json());
 app.use(taskRouter);
 app.use(userRouter);
@@ -14,18 +26,3 @@ app.use(userRouter);
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
-
-const bcrypt = require('bcryptjs');
-
-const myFunction = async () => {
-  const password = 'Password1';
-  const hashedPassword = await bcrypt.hash(password, 8);
-
-  console.log(password);
-  console.log(hashedPassword);
-
-  const isMatch = await bcrypt.compare('Password1', hashedPassword);
-  console.log(isMatch);
-};
-
-myFunction();
